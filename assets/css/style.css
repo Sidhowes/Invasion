@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Sriracha:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700");
+
+body {
+     background-image: url("../images/game-page.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: #11e422
+}
+
+.logo {
+    display: flex;
+    margin: 0, auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 8.5rem;
+    font-family: Sriracha;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 3.5rem;
+    font-family: Lato;
+    letter-spacing: 2px;
+}
