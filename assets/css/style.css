@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sriracha:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700");
 
 body {
-     background-image: url("../images/game-page.jpg");
+     background-image: url("../images/game-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,20 +10,42 @@ body {
 }
 
 .logo {
-    display: flex;
-    margin: 0, auto;
+    padding: 2rem;
     text-align: center;
     text-transform: uppercase;
 }
 
 h2 {
+    margin: auto;
     font-size: 8.5rem;
     font-family: Sriracha;
     letter-spacing: 2px;
 }
+.menu {
+    background-color: rgba(25, 25, 25, 0.6);
+    padding: 1rem; 
+    border-radius: 1rem;
+    margin: 10rem auto;
+    text-align: center;    
+    text-transform: uppercase; 
+    max-width: 50rem;
+    animation-name: alien-lights;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes alien-lights {
+    0% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
+    50% {box-shadow: 0 0 1.5rem 1.5rem rgba(71, 206, 8, 0.603)}
+    75% {box-shadow: 0 0 1.5rem 1.5rem rgb(120, 243, 5)}
+    100% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
+    
+}
 
 h3 {
     font-size: 3.5rem;
-    font-family: Lato;
+    font-family: Sriracha;
     letter-spacing: 2px;
 }
+
