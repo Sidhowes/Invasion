@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Sriracha:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700");
 
 body {
-     background-image: url("../images/game-2.jpg");
+    background-image: url("../images/game-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    color: #11e422
+    color: #11e422;
 }
 
 .logo {
@@ -63,50 +63,3 @@ a:hover {
 
 /*---------------------------------------------*/
 
-/* Popup box BEGIN */
-.hover_bkgr{
-    cursor:pointer;
-    position:fixed;
-    text-align:center;
-    width:54.5%;
-}
-
-.hover_bkgr > div {
-    background-color: rgba(25, 25, 25, 0.9);
-    box-shadow: 10px 10px 60px #555;
-    width: 67%;
-    position: relative;
-    border-radius: 10px;
-    padding: 15px 5%;
-    margin: -106px 0px 0px -9px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.popupCloseButton {
-    background-color: #fff;
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: arial;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 25px;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-.popupCloseButton:hover {
-    background-color: #ccc;
-}
-.trigger_popup {
-    cursor: pointer;
-    font-size: 20px;
-    display: inline-block;
-    font-weight: bold;
-}
-/* Popup box BEGIN */
