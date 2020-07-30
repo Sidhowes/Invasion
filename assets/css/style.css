@@ -21,6 +21,7 @@ h2 {
     font-family: Sriracha;
     letter-spacing: 2px;
 }
+
 .menu {
     background-color: rgba(25, 25, 25, 0.6);
     padding: 1rem; 
@@ -58,8 +59,137 @@ a:hover {
     color: rgb(79, 175, 0);
 }
 
-
-
-
 /*---------------------------------------------*/
 
+
+/* Popup box BEGIN */
+.box{
+    cursor:pointer;
+    position:fixed;
+    text-align:center;
+    width:54.5%;
+}
+
+
+.box > div {
+    background-color: rgba(25, 25, 25, 0.9);
+    box-shadow: 10px 10px 60px #555;
+    width: 67%;
+    position: relative;
+    border-radius: 10px;
+    padding: 15px 5%;
+    margin: -106px 0px 0px -9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupCloseButton {
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.popup {
+    cursor: pointer;
+    font-size: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box end */
+
+
+#volume, #mute {
+    color: #11e422;
+    background-color: rgba(25, 25, 25, 0.9);
+    width: 60px;
+    height: 60px;
+    padding: 2px 0;
+    border-radius: 50%;
+    font-size: 35px;
+    line-height: 7px;
+    text-align: center;
+    float: right;
+    margin-right: 30px;
+}
+
+/*-----------------------------------------------------game page*/
+
+.container {
+    background-color: rgba(25, 25, 25, 0.6);
+    padding: 1rem; 
+    border-radius: 1rem;
+    margin: 10rem auto;
+    text-align: center;    
+    text-transform: uppercase; 
+    max-width: 65rem;
+    height: 35rem;
+    animation-name: alien-lights;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes alien-lights {
+    0% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
+    50% {box-shadow: 0 0 1.5rem 1.5rem rgba(71, 206, 8, 0.603)}
+    75% {box-shadow: 0 0 1.5rem 1.5rem rgb(120, 243, 5)}
+    100% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
+    
+}
+
+#alien {
+    
+    color: purple;
+    float: left;
+    font-size: 6rem;
+
+}
+
+#meteor{
+    color: orange;
+    float: right;
+    font-size: 6rem;
+}
+
+#shuttle {
+     color: #11e422;
+     font-size: 6rem;
+}
+
+#astronaut {
+    color: #fff;
+    float: left;
+    font-size: 6rem;
+}
+
+#star {
+    color: yellow;
+    float: right;
+    font-size: 6rem;
+}
+
+.fa, .fas {
+    font-weight: 900;
+    padding: 5px;
+    margin: 5px;
+}
+
+.fab, .far {
+    font-weight: 400;
+    padding: 5px;
+    margin: 5px;
+}
