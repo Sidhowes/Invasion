@@ -130,66 +130,33 @@ a:hover {
 
 .container {
     background-color: rgba(25, 25, 25, 0.6);
-    padding: 1rem; 
+    padding: 1rem;
     border-radius: 1rem;
-    margin: 10rem auto;
-    text-align: center;    
-    text-transform: uppercase; 
-    max-width: 65rem;
-    height: 35rem;
+    margin: 4rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 60rem;
+    height: 34rem;
     animation-name: alien-lights;
     animation-duration: 3s;
-    animation-iteration-count: infinite;
-
+    animation-iteration-count: infinite
 }
 
 @keyframes alien-lights {
     0% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
     50% {box-shadow: 0 0 1.5rem 1.5rem rgba(71, 206, 8, 0.603)}
-    75% {box-shadow: 0 0 1.5rem 1.5rem rgb(120, 243, 5)}
+    75% {box-shadow: 0 0 1.5rem 1.5rem rgba(120, 243, 5,)}
     100% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
-    
 }
 
-#alien {
-    
-    color: purple;
-    float: left;
-    font-size: 6rem;
-
+.game-info {
+    font-size: 4rem;
+    font-family: Sriracha;
+    color: red;
 }
 
-#meteor{
-    color: orange;
-    float: right;
-    font-size: 6rem;
-}
-
-#shuttle {
-     color: #11e422;
-     font-size: 6rem;
-}
-
-#astronaut {
-    color: #fff;
-    float: left;
-    font-size: 6rem;
-}
-
-#star {
-    color: yellow;
-    float: right;
-    font-size: 6rem;
-}
-
-.fa, .fas {
-    font-weight: 900;
-    padding: 5px;
-    margin: 5px;
-}
-
-.fab, .far {
-    font-weight: 400;
-    padding: 5px;
-    margin: 5px;
+.card {
+    background-color: red;
+    height: 150px;
+    width: 100px;
 }
