@@ -128,7 +128,17 @@ a:hover {
 
 /*-----------------------------------------------------game page*/
 
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 .container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
     background-color: rgba(25, 25, 25, 0.6);
     padding: 1rem;
     border-radius: 1rem;
@@ -152,11 +162,11 @@ a:hover {
 .game-info {
     font-size: 4rem;
     font-family: Sriracha;
-    color: red;
 }
 
 .card {
-    background-color: red;
-    height: 150px;
+    background-color: green;
+    height: 125px;
     width: 100px;
 }
+
