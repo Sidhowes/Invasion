@@ -188,12 +188,12 @@ a:hover {
     
 }
 
-.card:hover .card-back {
+.card.visible .card-back {
     transform: rotateY(-180deg);
 }
 
 
-.card:hover .card-front {
+.card.visible .card-front {
     transform: rotateY(0);
 }
 
@@ -223,5 +223,22 @@ a:hover {
 
 .card-front:hover .card-value {
   transform: scale(1);
+}
+
+.card:hover .card-value {
+    animation: spin 2s linear infinite 800ms;
+}
+
+@keyframes spin {
+    0% 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-180deg)
+    }
+
+    75% {
+        transform: rotate(180deg)
+    }
 }
 
