@@ -145,8 +145,8 @@ a:hover {
     margin: 4rem auto;
     text-align: center;
     text-transform: uppercase;
-    max-width: 60rem;
-    height: 34rem;
+    max-width: 70rem;
+    height: 36rem;
     animation-name: alien-lights;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -227,6 +227,35 @@ a:hover {
 
 .card:hover .card-value {
     animation: spin 2s linear infinite 800ms;
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    z-index: 100;
+    color: #11e422;
+    font-family: Sriracha, sans-serif;
+}
+
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-large 800ms forwards;
+}
+
+@keyframes overlay-large {
+    from {
+        background-color: rgba(0, 0, 0,);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, .7);
+        font-size: 10rem;
+    }
 }
 
 @keyframes spin {
