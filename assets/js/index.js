@@ -1,3 +1,4 @@
+
 $(window).click(function() {
     $('.popup').click(function(){
        $('.box').show();
