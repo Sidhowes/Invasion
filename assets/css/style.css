@@ -197,13 +197,10 @@ a:hover {
     transform: rotateY(0);
 }
 
-.card-back {
-    transform: rotateY(0);
-}
+
 
 
 .card-back:hover {
-    transform: translateY(0);
     width: 102%;
     height: 102%;
 }
@@ -225,7 +222,7 @@ a:hover {
   transform: scale(1);
 }
 
-.card:hover .card-value {
+.card.matched .card-value {
     animation: spin 2s linear infinite 800ms;
 }
 
@@ -237,6 +234,7 @@ a:hover {
     right: 0;
     bottom: 0;
     align-items: center;
+    justify-content: center;
     z-index: 100;
     color: #11e422;
     font-family: Sriracha, sans-serif;
