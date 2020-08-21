@@ -4,6 +4,7 @@ let firstCard, secondCard;
 let gameLock = true;
 let pairs = 6;
 let clicks = 0;
+let cards = Array.from(document.getElementsByClassName('card'));
 
 card.forEach(cards => cards.addEventListener('click', flipOver));
 shuffle();
