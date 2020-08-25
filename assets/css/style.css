@@ -5,7 +5,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     color: #11e422;
 }
 
@@ -68,6 +68,7 @@ a:hover {
     position:fixed;
     text-align:center;
     width:54.5%;
+    display: none;
 }
 
 
@@ -128,103 +129,44 @@ a:hover {
 
 /*-----------------------------------------------------game page*/
 
-.game-info-container {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-
-}
-
 .container {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
-    background-color: rgba(25, 25, 25, 0.6);
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 4rem auto;
-    text-align: center;
-    text-transform: uppercase;
-    max-width: 97rem;
-    height: 35rem;
-    animation-name: alien-lights;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    perspective: 500px;
-}
-
-@keyframes alien-lights {
-    0% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
-    50% {box-shadow: 0 0 1.5rem 1.5rem rgba(71, 206, 8, 0.603)}
-    75% {box-shadow: 0 0 1.5rem 1.5rem rgba(120, 243, 5,)}
-    100% {box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603)}
-}
-
-.game-info {
-    font-size: 4rem;
-    font-family: Sriracha;
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
 }
 
 .card {
-    position: relative;
-    background-color:  rgba(25, 25, 25, 0.6);
-    height: 100px;
-    width: 150px;
-}
-
-.card-face {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    overflow: hidden;
-    backface-visibility: hidden;
-    transition: transform 800ms ease-in-out;
-    
-}
-
-.card.visible .card-back {
-    transform: rotateY(-180deg);
-}
-
-
-.card.visible .card-front {
-    transform: rotateY(0);
-}
-
-
-
-
-.card-back:hover {
-    width: 102%;
-    height: 102%;
-}
-
-.card-front {
-    transform: rotateY(180deg)
-}
-
-
-.card-value {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
   position: relative;
-  transition: transform 100ms ease-in-out;
-  transform: scale(.9); 
-  width: 100%;
-  height: 100%;
-}
-
-.card-front:hover .card-value {
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
   transform: scale(1);
 }
 
-.card.matched .card-value {
-    animation: spin 2s linear infinite 800ms;
+.card:active {
+    transform: scale(.97);
+    transition: transform .2s
 }
+
+.card-back,
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    background: #fff;
+}
+
+
+
+
 
 .overlay-text {
     display: none;
@@ -261,18 +203,6 @@ a:hover {
     }
 }
 
-@keyframes spin {
-    0% 100% {
-        transform: rotate(0);
-    }
-    25% {
-        transform: rotate(-180deg)
-    }
-
-    75% {
-        transform: rotate(180deg)
-    }
-}
 
 @media (max-width 1100px){
     
