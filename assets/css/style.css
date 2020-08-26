@@ -194,10 +194,9 @@ a:hover {
     height: 102%;
 }
 
-.cards.matched .card-front .card-back {
+.spin {
     animation: spin 1s linear infinite 800ms;
 }
-
 
 
 @keyframes spin {

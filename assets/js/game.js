@@ -28,21 +28,25 @@ function flipcard() {
 function checkForMatch(){
     //cards match?
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards();
+        match();
     } else {
-        unflipCards();
+        flipBack();
     }
 }
         
-function disableCards() {
+function match() {
     //matched
         firstCard.removeEventListener("click", flipcard);
+        firstCard.classList.add("spin");
         secondCard.removeEventListener("click", flipcard);
+        secondCard.classList.add("spin");
+        pairs --;
+        clicks += 2;  
 
         resetBoard();
         }
 
-function unflipCards() {
+function flipBack() {
     //no match
     lockBoard = true
 
