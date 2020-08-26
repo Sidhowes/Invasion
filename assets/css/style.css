@@ -201,13 +201,13 @@ a:hover {
 
 @keyframes spin {
   0%, 100% {
-    transform: rotate(0)
+    transform: rotate(0) rotateY(180deg);
   }
   25% {
-    transform: rotate(-45deg)
+    transform: rotateZ(-45deg) rotateY(180deg);
   }
   75% {
-    transform: rotate(45deg)
+    transform: rotateZ(45deg) rotateY(180deg);
   }
 }
 
