@@ -20,7 +20,36 @@ function flipcard() {
     //second click
     secondCard = this;
     
-    
+    checkForMatch();
+  }
+
+
+function checkForMatch(){
+    //cards match?
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+    } else {
+        unflipCards();
+    }
+}
+        
+function disableCards() {
+    //matched
+        firstCard.removeEventListener("click", flipcard);
+        secondCard.removeEventListener("click", flipcard);
+
+        resetBoard();
+        }
+
+function unflipCards() {
+    //no match
+    lockBoard = true
+
+    setTimeout(() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+        
+      
 
 
 
