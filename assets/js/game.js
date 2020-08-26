@@ -49,7 +49,21 @@ function unflipCards() {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
         
-      
+        resetBoard();
+        }, 1000);
+}
+        
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null]
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
 
 
 
