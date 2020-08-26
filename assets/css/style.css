@@ -129,9 +129,20 @@ a:hover {
 
 /*-----------------------------------------------------game page*/
 
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    font-size: 4rem;
+    font-family: Sriracha;
+}
+
 .container {
-  width: 622px;
-  height: 600px;
+  width: 694px;
+  height: 486px;
   background-color: rgba(25, 25, 25, 0.6);
   border-radius: 1rem;
   padding: 1rem;
@@ -153,7 +164,7 @@ a:hover {
 
 .card {
   width: calc(25% - 20px);
-  height: calc(33.333% - 64px);
+  height: calc(38.333% - 64px);
   margin: 10px;
   position: relative;
   transform-style: preserve-3d;
@@ -167,7 +178,7 @@ a:hover {
     transition: transform .2s
 }
 
-.card-font,
+.card-front,
 .card-back {
     position: absolute;
     width: 100%;
@@ -176,6 +187,29 @@ a:hover {
     padding: 20px;
     background: rgba(10, 236, 59, 1);
     backface-visibility: hidden;
+}
+
+.card-front, .card-back:hover {
+    width: 102%;
+    height: 102%;
+}
+
+.cards.matched .card-front .card-back {
+    animation: spin 1s linear infinite 800ms;
+}
+
+
+
+@keyframes spin {
+  0%, 100% {
+    transform: rotate(0)
+  }
+  25% {
+    transform: rotate(-45deg)
+  }
+  75% {
+    transform: rotate(45deg)
+  }
 }
 
 .card-front {
