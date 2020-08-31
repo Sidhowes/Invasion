@@ -1,9 +1,26 @@
 
+$(".visible").click(function(){
+    $(".visible").removeClass("visible");
+})
+
+
 const cards = document.querySelectorAll(".card");
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
+var timeleft = 60;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("time-remaining").innerHTML = "Finished";
+  } else {
+    document.getElementById("time-remaining").innerHTML = timeleft + "s";
+  }
+  timeleft -= 1;
+}, 1000);
+
 
 
 function flipcard() {
@@ -74,3 +91,4 @@ function resetBoard() {
 
 
 cards.forEach(card => card.addEventListener("click", flipcard));
+
