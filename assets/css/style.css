@@ -130,7 +130,7 @@ a:hover {
 /*-----------------------------------------------------game page*/
 
 .game-info-container {
-    grid-column: 1 / -1;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -147,6 +147,7 @@ a:hover {
   border-radius: 1rem;
   padding: 1rem;
   margin: auto;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   perspective: 500px;
@@ -156,10 +157,10 @@ a:hover {
 }
 
 @keyframes alien-lights {
-    0%{box-shadow: 0 0 1.5rem rgba(45, 133, 5, 0.603)}
-    50%{box-shadow: 0 0 1.5rem rgba(71, 206, 8, 0.603)}
-    75%{box-shadow: 0 0 1.5rem rgba(120, 243, 5,)}
-    100%{box-shadow: 0 0 1.5rem rgba(45, 133, 5, 0.603)}
+    0%{box-shadow: 0px 1px 3rem 2rem rgba(172, 11, 168, 1)}
+    50%{box-shadow: 0px 1px 3rem 2rem rgba(71, 206, 8, 1)}
+    75%{box-shadow: 0px 1px 3rem 2rem rgba(120, 243, 5, 1)}
+    100%{box-shadow: 0px 1px 3rem 2rem rgba(241, 42, 210, 1)}
 }
 
 .card {
@@ -204,15 +205,16 @@ a:hover {
     transform: rotate(0) rotateY(180deg);
   }
   25% {
-    transform: rotateZ(-45deg) rotateY(180deg);
+    transform: rotateZ(-5deg) rotateY(180deg);
   }
   75% {
-    transform: rotateZ(45deg) rotateY(180deg);
+    transform: rotateZ(5deg) rotateY(180deg);
   }
 }
 
 .card-front {
     transform: rotateY(180deg);
+    background:#e01ee0;
 }
 
 .card.flip {
@@ -264,18 +266,25 @@ a:hover {
 
 @media (max-width: 400px) {
     .h2 {
-        font-size: 2rem;
+        font-size: 4.5rem;
 
     }
     
     .container {
-        grid-template-columns: repeat(3, auto);
-        width: 50rem;
-        height: 40rem;
+    width: 35rem;
+    height: 41rem;
     }
 
     .game-info-container {
         flex-direction: column;
         align-items: center;
+        padding: 15px;
+        display: flex;
     }
+
+    .menu {
+        max-width: 32rem;
+    }
+
+    
 }
