@@ -28,7 +28,7 @@ function initTimer(){
 }
 
 function displayGameOver(){
-    window.href = "/gameover";
+    window.href = "/gameover"
 }
 
 
@@ -45,7 +45,6 @@ function flipcard() {
       firstCard = this;
       return;
   }
-
     //second click
     secondCard = this;
     checkForMatch();
@@ -78,12 +77,10 @@ function match() {
 function flipBack() {
     //no match
     lockBoard = true
-    
 
     setTimeout(() => {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
-        
         resetBoard();
         }, 1000);
 }
@@ -98,9 +95,6 @@ function resetGame(){
     flipCount = 0;
 }
 
-$('#reset-btn').click(function() {
-    resetGame();
-});
 
 (function shuffle() {
   cards.forEach(card => {
