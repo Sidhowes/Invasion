@@ -113,19 +113,6 @@ a:hover {
 /* Popup box end */
 
 
-#volume, #mute {
-    color: #11e422;
-    background-color: rgba(25, 25, 25, 0.9);
-    width: 60px;
-    height: 60px;
-    padding: 2px 0;
-    border-radius: 50%;
-    font-size: 35px;
-    line-height: 7px;
-    text-align: center;
-    float: right;
-    margin-right: 30px;
-}
 
 /*-----------------------------------------------------game page*/
 

@@ -28,7 +28,7 @@ function initTimer(){
 }
 
 function displayGameOver(){
-    window.href = "/gameover"
+    window.alert = "Gameover"
 }
 
 
