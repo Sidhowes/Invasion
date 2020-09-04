@@ -24,7 +24,8 @@ function initTimer(){
     }, 1000);
 }
 function displayGameOver(){
-    window.alert = "Gameover"
+    window.alert("Gameover")
+console.log('Gameover')
 }
 function flipcard() {
   if (lockBoard) return;
@@ -61,7 +62,8 @@ function match() {
     secondCard.classList.add("spin");
     noOfPairsFound++;
     if(noOfPairsFound === TOTAL_PAIR_COUNT) {
-        window.alert = 'Congratulations'
+console.log('Congratulations')
+        window.alert('Congratulations');
     }
     resetBoard();
 }
