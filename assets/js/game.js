@@ -1,18 +1,15 @@
-const GAME_DURATION = 60
-
+const GAME_DURATION = 60;
+const TOTAL_PAIR_COUNT = 6;
 //"click to play" overlay dismiss handler
 $("#start-game").click(function(){
     $("#start-game").removeClass("visible");
 })
-
-
 const cards = document.querySelectorAll(".card");
-
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let flipCount = 0;
-
+let noOfPairsFound = 0;
 function initTimer(){
     var timeLeft = GAME_DURATION;
     var downloadTimer = setInterval(function(){
@@ -26,18 +23,13 @@ function initTimer(){
     timeLeft -= 1;
     }, 1000);
 }
-
 function displayGameOver(){
     window.alert = "Gameover"
 }
-
-
-
 function flipcard() {
   if (lockBoard) return;
   if (this === firstCard) return;
   this.classList.add("flip");
-
   incrementflipCounter();
   if (!hasFlippedCard) {
       //first click
@@ -49,13 +41,10 @@ function flipcard() {
     secondCard = this;
     checkForMatch();
   }
-
   function incrementflipCounter(){
       flipCount += 1;
       document.getElementById("flips").innerHTML = flipCount;
   }
-
-
 function checkForMatch(){
     //cards match?
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
@@ -64,46 +53,40 @@ function checkForMatch(){
         flipBack();
     }
 }
-        
 function match() {
     //matched
-        firstCard.removeEventListener("click", flipcard);
-        firstCard.classList.add("spin");
-        secondCard.removeEventListener("click", flipcard);
-        secondCard.classList.add("spin");
-        resetBoard();
-        }
-
+    firstCard.removeEventListener("click", flipcard);
+    firstCard.classList.add("spin");
+    secondCard.removeEventListener("click", flipcard);
+    secondCard.classList.add("spin");
+    noOfPairsFound++;
+    if(noOfPairsFound === TOTAL_PAIR_COUNT) {
+        window.alert = 'Congratulations'
+    }
+    resetBoard();
+}
 function flipBack() {
     //no match
     lockBoard = true
-
     setTimeout(() => {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
         resetBoard();
         }, 1000);
 }
-        
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null]
 }
-
 function resetGame(){
     resetBoard();
     flipCount = 0;
 }
-
-
 (function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
 })();
-
-
-
 cards.forEach(card => card.addEventListener("click", flipcard));
 initTimer();
