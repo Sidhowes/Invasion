@@ -10,6 +10,8 @@ let lockBoard = false;
 let firstCard, secondCard;
 let flipCount = 0;
 let noOfPairsFound = 0;
+
+
 function initTimer(){
     var timeLeft = GAME_DURATION;
     var downloadTimer = setInterval(function(){
@@ -23,6 +25,8 @@ function initTimer(){
     timeLeft -= 1;
     }, 1000);
 }
+
+
 function displayGameOver(){
     window.alert("Gameover")
 console.log('Gameover')
@@ -65,6 +69,7 @@ function match() {
 console.log('Congratulations')
         window.alert('Congratulations');
     }
+  
     resetBoard();
 }
 function flipBack() {
@@ -81,9 +86,14 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null]
 }
 function resetGame(){
-    resetBoard();
-    flipCount = 0;
+    // resetBoard();
+    // flipCount = 0
+    
+    // shuffle();
+    
+    location.reload();
 }
+
 (function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
