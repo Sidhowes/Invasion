@@ -1,5 +1,6 @@
 const GAME_DURATION = 60;
 const TOTAL_PAIR_COUNT = 6;
+
 //"click to play" overlay dismiss handler
 $("#start-game").click(function () {
     $("#start-game").removeClass("visible");
@@ -11,7 +12,7 @@ let firstCard, secondCard;
 let flipCount = 0;
 let noOfPairsFound = 0;
 var gameComplete = false;
-
+//countdown timer
 function initTimer() {
     var timeLeft = GAME_DURATION;
     var downloadTimer = setInterval(function () {
@@ -22,6 +23,7 @@ function initTimer() {
         } else {
             document.getElementById("time-remaining").innerHTML = timeLeft + "s";
         }
+        //timer stops when games is completed within the 60s
         if(gameComplete === false){ 
             timeLeft -= 1;
         }
@@ -47,6 +49,7 @@ function flipcard() {
     secondCard = this;
     checkForMatch();
 }
+//flipcount
 function incrementflipCounter() {
     flipCount += 1;
     document.getElementById("flips").innerHTML = flipCount;

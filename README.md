@@ -95,6 +95,7 @@ You can view the live website here - https://sidhowes.github.io/Invasion/
 * [jQuery](https://jquery.com/) - jQuery was used to open and hide the pop up window and to remove the visible class in my overlay. Jquery was used alongside Javascript throughout the project.
 * [W3Cschools css validator](https://jigsaw.w3.org/css-validator/validator) - Validate my css code to make sure there are no errors.
 * [W3Cschools html validator](https://validator.w3.org/) - Validate my html code to make sure there are no errors.
+* [beautifytools javascript validator](http://beautifytools.com/javascript-validator.php) - Validate my javascript code.
 
 ## Testing
 
