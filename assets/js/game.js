@@ -1,10 +1,13 @@
-const GAME_DURATION = 60;
+const GAME_DURATION = 10;
 const TOTAL_PAIR_COUNT = 6;
+var downloadTimer;
 
 //"click to play" overlay dismiss handler
 $("#start-game").click(function () {
     $("#start-game").removeClass("visible");
+    initTimer();
 });
+
 const cards = document.querySelectorAll(".card");
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -15,39 +18,41 @@ var gameComplete = false;
 //countdown timer
 function initTimer() {
     var timeLeft = GAME_DURATION;
-    var downloadTimer = setInterval(function () {
-        if (timeLeft <= 0) {
+    downloadTimer = setInterval(function () {
+        if (timeLeft < 0) {
             displayGameOver();
             clearInterval(downloadTimer);
             document.getElementById("time-remaining").innerHTML = "Finished";
         } else {
             document.getElementById("time-remaining").innerHTML = timeLeft + "s";
-        }
-        //timer stops when games is completed within the 60s
-        if(gameComplete === false){ 
             timeLeft -= 1;
         }
     }, 1000);
 }
 
 function displayGameOver() {
-    window.alert("Gameover");
-    console.log("Gameover");
+   $('#game-over').modal('show');
+   gameComplete = true;
 }
+
+
+
 function flipcard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
-    this.classList.add("flip");
-    incrementflipCounter();
-    if (!hasFlippedCard) {
-        //first click
-        hasFlippedCard = true;
-        firstCard = this;
-        return;
+    if (!gameComplete) {
+        if (lockBoard) return;
+        if (this === firstCard) return;
+        this.classList.add("flip");
+        incrementflipCounter();
+        if (!hasFlippedCard) {
+            //first click
+            hasFlippedCard = true;
+            firstCard = this;
+            return;
+        }
+        //second click
+        secondCard = this;
+        checkForMatch();
     }
-    //second click
-    secondCard = this;
-    checkForMatch();
 }
 //flipcount
 function incrementflipCounter() {
@@ -70,7 +75,6 @@ function match() {
     secondCard.classList.add("spin");
     noOfPairsFound++;
     if (noOfPairsFound === TOTAL_PAIR_COUNT) {
-        console.log("Congratulations");
         window.alert("Congratulations");
         gameComplete = true;
     }
@@ -104,5 +108,4 @@ function resetGame() {
         card.style.order = randomPos;
     });
 })();
-cards.forEach((card) => card.addEventListener("click", flipcard));
-initTimer();
+cards.forEach((card) => card.addEventListener("click", flipcard)); 
