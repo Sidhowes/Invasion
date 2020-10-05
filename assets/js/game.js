@@ -1,4 +1,4 @@
-const GAME_DURATION = 10;
+const GAME_DURATION = 60;
 const TOTAL_PAIR_COUNT = 6;
 var downloadTimer;
 
@@ -75,8 +75,9 @@ function match() {
     secondCard.classList.add("spin");
     noOfPairsFound++;
     if (noOfPairsFound === TOTAL_PAIR_COUNT) {
-        window.alert("Congratulations");
+        $('#congratulations').modal('show');
         gameComplete = true;
+        clearInterval(downloadTimer);
     }
     
 

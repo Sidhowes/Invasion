@@ -17,15 +17,30 @@
         <div id="start-game" class="overlay-text visible">
             Click To Start!
         </div>
-
+`
     
 
 <!-- Modal -->
-<div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game-overModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="game-overModalLabel">Game Over!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="congratulations" tabindex="-1" aria-labelledby="congratulationsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="congratulationsModalLabel">Congratulations you have found all pairs!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

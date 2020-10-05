@@ -2,7 +2,7 @@
 
 body {
     background-image: url("../images/game-1.jpg");
-    background-position: center;
+    background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -17,9 +17,10 @@ body {
 
 h2 {
     margin: auto;
-    font-size: 8.5rem;
+    font-size: 4.5rem;
     font-family: Sriracha;
     letter-spacing: 2px;
+    margin-bottom: -70px;
 }
 
 .menu {
@@ -119,19 +120,20 @@ a:hover {
 /*-----------------------------------------------------game page*/
 
 .game-info-container {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: -10px;
 }
 
 .game-info {
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: Sriracha;
 }
 
 .container {
-    width: 694px;
-    height: 486px;
+    width: 872px;
+    height: 417px;
     background-color: rgba(25, 25, 25, 0.6);
     border-radius: 1rem;
     padding: 1rem;
@@ -161,9 +163,9 @@ a:hover {
 }
 
 .card {
-    width: calc(25% - 20px);
-    height: calc(38.333% - 64px);
-    margin: 10px;
+    width: calc(23% - -4px);
+    height: calc(36.333% - 20px);
+    margin: 6px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -242,6 +244,8 @@ a:hover {
 
 
 
+
+
 @keyframes overlay-large {
     from {
         background-color: rgba(0, 0, 0);
@@ -276,18 +280,65 @@ a:hover {
     }
 }
 
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 4rem;
+    }
+
+    .menu {
+        max-width: 70rem;
+    }
+
+    .box {
+        width: 136%;
+    }
+    
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        display: flex;
+    }
+
+    .container {
+        width: 45rem;
+        height: 32rem;
+    }
+
+    .card {
+        width: calc(22% - -8px);
+        height: calc(18.333% - -53px);
+    }
+
+    @keyframes overlay-large {
+    from {
+        background-color: rgba(0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0.5);
+        font-size: 6rem;
+    }
+}
+}
+
 @media screen and (max-width: 400px) {
     h2 {
         font-size: 3rem;
     }
 
     .container {
-        width: 35rem;
-        height: 44rem;
+        width: 21rem;
+        height: 22rem;
+    }
+
+    .card {
+        width: calc(26% - -10px);
+        height: calc(5.333% - -54px);
     }
 
     .game-info-container {
-        padding: 15px;
+        padding: 22px;
     }
 
     .menu {
@@ -302,4 +353,15 @@ a:hover {
     .game-info {
         font-size: 2rem;
     }
+
+    @keyframes overlay-large {
+    from {
+        background-color: rgba(0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0.5);
+        font-size: 3rem;
+    }
+}
 }
