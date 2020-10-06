@@ -88,6 +88,7 @@ You can view the live website here - https://sidhowes.github.io/Invasion/
 * [W3Cschools css validator](https://jigsaw.w3.org/css-validator/validator) - Validate my css code to make sure there are no errors.
 * [W3Cschools html validator](https://validator.w3.org/) - Validate my html code to make sure there are no errors.
 * [beautifytools javascript validator](http://beautifytools.com/javascript-validator.php) - Validate my javascript code.
+* [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) - used to create my Modal.
 
 ## Testing
 
@@ -143,7 +144,7 @@ My website is hosted on Github pages, following these steps to deploy the websit
 * [Icon archive](https://iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/alien-ship-icon.html)
 
 ### Acknowlegements 
-
+* Code for my Modals from [Bootstarp](https://getbootstrap.com/docs/4.0/components/modal/)
 * Help and guidance from my mentor _Akshat Grag_.
 * inspiration from: 
   * [youtube](https://www.youtube.com/watch?v=bbb9dZotsOc)
