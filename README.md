@@ -6,9 +6,8 @@ You can view the live website here - https://sidhowes.github.io/Invasion/
 
 ### Desktops 
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-cover.png">
-</p>
+![desktop wireframe](assets/wireframes/Wireframe-cover.png)
+
 
 
 ## UX
@@ -29,40 +28,33 @@ You can view the live website here - https://sidhowes.github.io/Invasion/
 
 ### Home page desktop
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-1.png">
-</p>
+![desktop wireframe](assets/wireframes/Wireframe-1.png)
 
 ### Game page desktop
 
+![desktop wireframe](assets/wireframes/Wireframe-2.png)
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-2.png">
-</p>
 
 ### Home page ipad
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-3.png">
-</p>
+
+![ipad wireframe](assets/wireframes/Wireframe-3.png)
+
 
 ### Game page ipad
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-4.png">
-</p>
+![ipad wireframe](assets/wireframes/Wireframe-4.png)
+
 
 ### Home page iphone
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-5.png">
-</p>
+![iphone wireframe](assets/wireframes/Wireframe-5.png)
+
 
 ### Game page iphone
 
-<p align="center">
-  <img width="600" height="600" src="assets/wireframes/Wireframe-6.png">
-</p>
+![iphone wireframe](assets/wireframes/Wireframe-6.png)
+
 
 
 ## Features 
@@ -104,7 +96,11 @@ mobile device.
 Whenever a change was made I used the selector tool and open up the browser to see that change and to see how it would look.
 Another testing method was the inspect selector on the opened browser and although it does not save the changes made while using this 
 testing method it is a quick way to see how elements look when moved around.
-Lastly a testing method useed was my own by playing the game a number of times to make sure the game functions as intended.
+I also tested the game myself by playing the game a number of times to make sure the game functions as intended.
+Lastly i used:
+HTML and CSS to validate via W3C's free utility at https://validator.w3.org/.
+and the JavaScript file was validated via https://codebeautify.org/jsvalidate.
+
 
 
 ### Problems encoutered when testing
@@ -137,8 +133,15 @@ My website is hosted on Github pages, following these steps to deploy the websit
 
 ### Media
 
-* All images used from [Google images](https://www.google.com/search?q=meteor+towards+earth&tbm=isch&ved=2ahUKEwijnMeT4MrrAhVPYxoKHS_IBJEQ2-cCegQIABAA&oq=meteor+towards+earth&gs_lcp=CgNpbWcQAzICCAAyBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBAgAEBgyBAgAEBg6BAgAEEM6BwgAELEDEEM6BQgAELEDOgYIABAFEB5Q6H5Y5bMBYO63AWgCcAB4AIABWIgB2wmSAQIyMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=crVPX6ObPM_Gaa-Qk4gJ&bih=625&biw=1366)
-  
+* main image used for project [Google images](https://interestingengineering.com/what-is-the-probability-of-a-huge-civilization-ending-asteroid-impact)
+* Icons used in the project: 
+* [Icon archive](https://www.iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/alien-2-icon.html)
+* [Icon archive](https://www.iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/alien-1-icon.html)
+* [Icon archive](https://www.iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/alien-4-icon.html)
+* [Icon archive](https://www.iconarchive.com/show/outline-icons-by-iconsmind/Alien-2-icon.html)
+* [Icon archive](https://iconarchive.com/show/100-free-solid-icons-by-roundicons/rocket-icon.html)
+* [Icon archive](https://iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/alien-ship-icon.html)
+
 ### Acknowlegements 
 
 * Help and guidance from my mentor _Akshat Grag_.
