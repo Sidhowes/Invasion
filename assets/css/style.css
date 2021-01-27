@@ -164,6 +164,7 @@ a:hover {
 
 .card {
     width: calc(23% - -4px);
+    background: unset;
     height: calc(36.333% - 20px);
     margin: 6px;
     position: relative;
