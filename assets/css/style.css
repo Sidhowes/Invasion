@@ -1,368 +1,593 @@
-@import url("https://fonts.googleapis.com/css?family=Sriracha:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Mobile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #068731;
+        }
 
-body {
-    background-image: url("../images/game-1.jpg");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    color: #11e422;
-}
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
 
-.logo {
-    padding: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-}
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
 
-h2 {
-    margin: auto;
-    font-size: 4.5rem;
-    font-family: Sriracha;
-    letter-spacing: 2px;
-    margin-bottom: -70px;
-}
+        section {
+            padding: 20px;
+        }
 
-.menu {
-    background-color: rgba(25, 25, 25, 0.6);
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 10rem auto;
-    text-align: center;
-    text-transform: uppercase;
-    max-width: 50rem;
-    animation-name: alien-lights;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
+        p {
+            color: white;
+        }
 
-@keyframes alien-lights {
-    0% {
-        box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603);
-    }
-    50% {
-        box-shadow: 0 0 1.5rem 1.5rem rgba(71, 206, 8, 0.603);
-    }
-    75% {
-        box-shadow: 0 0 1.5rem 1.5rem rgb(120, 243, 5);
-    }
-    100% {
-        box-shadow: 0 0 1.5rem 1.5rem rgba(45, 133, 5, 0.603);
-    }
-}
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
 
-h3 {
-    font-size: 3.5rem;
-    font-family: Sriracha;
-    letter-spacing: 2px;
-}
+        img {
+            width: 113%;
+            height: 9em;
+            margin-bottom: 10px;
+            cursor: pointer;
+            margin-left: -20px;
+        }
 
-a {
-    color: #11e422;
-    text-decoration: none;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-a:hover {
-    color: rgb(79, 175, 0);
-}
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            color: white;
+            background-color: #333;
+        }
 
-/*---------------------------------------------*/
+        th {
+            background-color: #333;
+            color: #fff;
+        }
 
-/* Popup box BEGIN */
-.box {
-    cursor: pointer;
-    position: fixed;
-    text-align: center;
-    width: 54.5%;
-    display: none;
-}
+        a {
+            color: #ffffff;
+            text-decoration: none; 
+        }
 
-.box > div {
-    background-color: rgba(25, 25, 25, 0.9);
-    box-shadow: 10px 10px 60px #555;
-    width: 67%;
-    position: relative;
-    border-radius: 10px;
-    padding: 15px 5%;
-    margin: -106px 0px 0px -9px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .sub-tabs {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
 
-.popupCloseButton {
-    background-color: #fff;
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: arial;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 25px;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-.popupCloseButton:hover {
-    background-color: #ccc;
-}
-.popup {
-    cursor: pointer;
-    font-size: 20px;
-    display: inline-block;
-    font-weight: bold;
-}
-/* Popup box end */
+        .sub-tab {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-/*-----------------------------------------------------game page*/
+        .teetable {
+            font-size: 12px;
+        }
 
-.game-info-container {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: -10px;
-}
-
-.game-info {
-    font-size: 2rem;
-    font-family: Sriracha;
-}
-
-.container {
-    width: 872px;
-    height: 417px;
-    background-color: rgba(25, 25, 25, 0.6);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: auto;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 500px;
-    animation: alien-lights;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes alien-lights {
-    0% {
-        box-shadow: 0px 1px 3rem 2rem rgba(172, 11, 168, 1);
-    }
-    50% {
-        box-shadow: 0px 1px 3rem 2rem rgba(71, 206, 8, 1);
-    }
-    75% {
-        box-shadow: 0px 1px 3rem 2rem rgba(120, 243, 5, 1);
-    }
-    100% {
-        box-shadow: 0px 1px 3rem 2rem rgba(241, 42, 210, 1);
-    }
-}
-
-.card {
-    width: calc(23% - -4px);
-    background: unset;
-    height: calc(36.333% - 20px);
-    margin: 6px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    transform: scale(1);
-}
-
-.card:active {
-    transform: scale(0.97);
-    transition: transform 0.2s;
-}
-
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    padding: 20px;
-    background: rgba(10, 236, 59, 1);
-    backface-visibility: hidden;
-}
-
-.card-front,
-.card-back:hover {
-    width: 102%;
-    height: 102%;
-}
-
-.spin {
-    animation: spin 1s linear infinite 800ms;
-}
-
-@keyframes spin {
-    0%,
-    100% {
-        transform: rotate(0) rotateY(180deg);
-    }
-    25% {
-        transform: rotateZ(-5deg) rotateY(180deg);
-    }
-    75% {
-        transform: rotateZ(5deg) rotateY(180deg);
-    }
-}
-
-.card-front {
-    transform: rotateY(180deg);
-    background: #e01ee0;
-}
-
-.card.flip {
-    transform: rotateY(180deg);
-}
-
-.overlay-text {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    color: #11e422;
-    font-family: Sriracha, sans-serif;
-}
-
-.overlay-text.visible {
-    display: flex;
-    flex-direction: column;
-    animation: overlay-large 800ms forwards;
-}
+        .teetable th, .teetable td {
+            padding: 8px;
+        }
 
 
+        .sub-tab:hover {
+            background-color: #eee;
+        }
+
+        .sub-tab-content {
+            display: none;
+        }
+
+        .sub-tab-content.active {
+            display: block;
+        }
+
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .ryder-cup-table {
+            width: 48%; 
+        }
+
+        .overlay-text {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            color: #11e422;
+            font-family: Sriracha, sans-serif;
+            transition: opacity 3s ease; /* Smooth transition effect */
+        }
+
+        .overlay-text.visible {
+            display: flex;
+            flex-direction: column;
+            animation: overlay-large 8000ms forwards;
+        }
+
+        @keyframes overlay-large {
+            from {
+                background-color: rgba(0, 0, 0);
+                font-size: 0;
+            }
+            to {
+                background-color: rgba(0, 0, 0.5);
+                font-size: 3rem;
+            }
+        }
+
+        /* New styles for transition effect */
+        .overlay-text.fade-out {
+            opacity: 0;
+        }
+
+        #start-game-video {
+            width: 104%;
+            height: 62vh;
+            margin-right: 7em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Marbella Golf Holiday<br>23rd-28th April 2024</h1>
+    </header>
+
+    <div id="start-game" class="overlay-text visible">
+        <div class="overlay-content">
+            <img src="images/rules.jpg" alt="tee Times">
+            <div id="countdown"></div>
+        </div>
+    </div>
 
 
+    <section id="teeTimes">
+        <h2 onclick="toggleTabContent('teeTimes')"><img src="images/teetime.jpeg" alt="tee Times"></h2>
+        <div id="teeTimesTab" class="sub-tab-content">
+            <table class="teetable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Golf Course <br><small>(Click on course name for link to golf course)</small></th>
+                        <th>Pick Up from Hotel</th>
+                        <th>Pick Up from Golf Course</th>
+                        <th>Duration to Course</th>
+                        <th>Tee Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-04-24</td>
+                        <td><a href="https://www.youtube.com/watch?v=L4rcu-Bnfro" target="_blank">Atalaya Golf</a></td>
+                        <td>08:00 AM</td>
+                        <td>14:30 PM</td>
+                        <td>6 minutes</td>
+                        <td>09:12 AM</td>
+                    </tr>                    
+                    <tr>
+                        <td>2024-04-25</td>
+                        <td><a href="https://www.youtube.com/watch?v=lYikR7bPt1Y&t=204s" target="_blank">Los Arqueros</a></td>
+                        <td>08:35 AM</td>
+                        <td>15:10 PM</td>
+                        <td>14 minutes</td>
+                        <td>09:50 AM</td>
+                    </tr>
+                    <tr>
+                        <td>2024-04-27</td>
+                        <td><a href="https://www.youtube.com/watch?v=mf3yRwqk88M" target="_blank">Valle Romano</a></td>
+                        <td>09:15 AM</td>
+                        <td>15:50 PM</td>
+                        <td>25 minutes</td>
+                        <td>10:30 AM</td>
+                    </tr>
 
+                </tbody>
+            </table>
+        </div>
+    </section>    
 
-@keyframes overlay-large {
-    from {
-        background-color: rgba(0, 0, 0);
-        font-size: 0;
-    }
-    to {
-        background-color: rgba(0, 0, 0.5);
-        font-size: 10rem;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .container {
-        width: 90rem;
-        height: 80rem;
-    }
-
-    .game-info-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px;
-        display: flex;
-    }
-
-    .menu {
-        max-width: 75rem;
-        height: 19rem;
-    }
-
-    .box {
-        width: 108.5%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    h2 {
-        font-size: 4rem;
-    }
-
-    .menu {
-        max-width: 70rem;
-    }
-
-    .box {
-        width: 136%;
-    }
+    <section id="hotels">
+        <h2 onclick="toggleTabContent('hotels')">
+            <a href="https://www.melia.com/en/hotels/spain/estepona/sol-marbella-estepona-atalaya-park/gallery?_its=JTdCJTIydmlkJTIyJTNBJTIyMjMxNmRiODQtYTg3Ny00NDc1LWI5MmEtYWJlYjlhZjJhYmVjJTIyJTJDJTIyc3RhdGUlMjIlM0ElMjJybHR%2BMTcwNjAzMzkyMH5sYW5kfjJfMzk2NjVfcHBjYXV0b19lYWU3NjUxYjJhNTUyNTg2NjhhZDE0ODBkNDc0ZDhhZH5wdF9nY2xpZH5DandLQ0FpQTVMMnRCaEJURWl3QWRTeEpYME5iY3FCeUtDMzlXczVRREpVeHdMd1NNZFZwUnpOZEZXYW1WVm1UWERkekNZU0ppX3RrclJvQ2RHOFFBdkRfQndFJTIyJTJDJTIyc2l0ZUlkJTIyJTNBMTgxNCU3RA%3D%3D" target="_blank">
+                <img src="images/hotel.jpeg" alt="Hotels Image">
+            </a>
+        </h2>
+    </section>
     
-    .game-info-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px;
-        display: flex;
-    }
+    <section id="rooms">
+        <h2 onclick="toggleTabContent('rooms')"><img src="images/rooms.jpeg" alt="Rooms"></h2>
+        <div id="roomsTab" class="sub-tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Players</th>
+                        <th>Rooms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Michael Williams - Jack Meredith</td>
+                        <td>Room 1</td>
+                    </tr>
+                    <tr>
+                        <td>Sid Howes - Jordan Meredith</td>
+                        <td>Room 2</td>
+                    </tr>
+                    <tr>
+                        <td>Harry Cleanthi - Jake Wilgoss</td>
+                        <td>Room 3</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Gough - Sam Gibson</td>
+                        <td>Room 4</td>
+                    </tr>
+                    <tr>
+                        <td>Adam Kheen - Jonny Cowlard (The Snorers)</td>
+                        <td>Room 5</td>
+                    </tr>
+                    <tr>
+                        <td>Tom Dunford - Jamie Taylor</td>
+                        <td>Room 6</td>
+                    </tr>
+                    <tr>
+                        <td>Keith Howes - Steve Collins</td>
+                        <td>Room 7</td>
+                    </tr>
+                    <tr>
+                        <td>Terry Gale - Anthony Buck</td>
+                        <td>Room 8</td>
+                    </tr>
 
-    .container {
-        width: 45rem;
-        height: 32rem;
-    }
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-    .card {
-        width: calc(22% - -8px);
-        height: calc(18.333% - -53px);
-    }
+    <section id="players">
+        <h2 onclick="toggleTabContent('players')"><img src="images/players.jpeg" alt="Players"></h2>
+        <div id="playersTab" class="sub-tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Handicap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jack Meredith</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Jake Wilgoss</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Sid Howes(Current Champ -2 Shots)</td>
+                        <td>15 (13)</td>
+                    </tr>
+                    <tr>
+                        <td>Jordan Meredith</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Adam Kheen</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Jonny Cowlard</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Steve Collins</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Keith Howes</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Anthony Buck</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Terry Gale</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Gough</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Harry Cleanthi</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Sam Gibson</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Jamie Taylor</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Williams</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>Tom Dunford</td>
+                        <td>27</td>
+                    </tr>
 
-    @keyframes overlay-large {
-    from {
-        background-color: rgba(0, 0, 0);
-        font-size: 0;
-    }
-    to {
-        background-color: rgba(0, 0, 0.5);
-        font-size: 6rem;
-    }
-}
-}
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-@media screen and (max-width: 400px) {
-    h2 {
-        font-size: 3rem;
-    }
+    <section id="scramble">
+        <h2 onclick="toggleTabContent('scramble')"><img src="images/teeball.jpeg" alt="Scramble"></h2>
+        <div id="scrambleTab" class="sub-tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Group</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Keith Howes - Steve Collins,<br>Terry Gale - Anthony Buck</td>
+                        <td>Group 1</td>
+                    </tr>
+                    <tr>
+                        <td>Jake Wilgoss - Michael Williams<br>Sid Howes - Jamie Taylor</td>
+                        <td>Group 2</td>
+                    </tr>
+                    <tr>
+                        <td>Jordan Meredith - Sam Gibson,<br>Michael Gough - Jonny Cowlard</td>
+                        <td>Group 3</td>
+                    </tr>
+                    <tr>
+                        <td>Adam Kheen - Harry Cleanthi,<br>Jack Meredith - Tom Dunford</td>
+                        <td>Group 4</td>
+                    </tr>
 
-    .container {
-        width: 21rem;
-        height: 22rem;
-    }
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-    .card {
-        width: calc(26% - -10px);
-        height: calc(5.333% - -54px);
-    }
+    <section id="rydercup">
+        <h2 onclick="toggleTabContent('rydercup')"><img src="images/rydercup.jpeg" alt="Ryder Cup"></h2>
+        <div id="rydercupTab" class="sub-tab-content">
+            <div class="table-container">
+                <table class="ryder-cup-table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team USA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Steve Collins (C)</td>
+                            <td>USA 1</td>
+                        </tr>
+                        <tr>
+                            <td>Terry Gale</td>
+                            <td>USA 1</td>
+                        </tr>
+                        <tr>
+                            <td>Jack Meredith</td>
+                            <td>USA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Jamie Taylor</td>
+                            <td>USA 2</td>
+                        </tr>
+                        <tr>
+                            <td>Sid Howes</td>
+                            <td>USA 3</td>
+                        </tr>
+                        <tr>
+                            <td>Tom Dunford</td>
+                            <td>USA 3</td>
+                        </tr>
+                        <tr>
+                            <td>Adam Kheen</td>
+                            <td>USA 4</td>
+                        </tr>
+                        <tr>
+                            <td>Harry Cleanthi</td>
+                            <td>USA 4</td>
+                        </tr>
 
-    .game-info-container {
-        padding: 22px;
-    }
+                    </tbody>
+                </table>
 
-    .menu {
-        max-width: 33rem;
-        height: 19rem;
-    }
+                <table class="ryder-cup-table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team Europe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Keith Howes (C)</td>
+                            <td>Europe 1</td>
+                        </tr>
+                        <tr>
+                            <td>Anthony Buck</td>
+                            <td>Europe 1</td>
+                        </tr>
+                        <tr>
+                            <td>Jake Wilgoss</td>
+                            <td>Europe 2</td>
+                        </tr>
+                        <tr>
+                            <td>Sam Gibson</td>
+                            <td>Europe 2</td>
+                        </tr>
+                        <tr>
+                            <td>Jordan Meredith</td>
+                            <td>Europe 3</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Williams</td>
+                            <td>Europe 3</td>
+                        </tr>
+                        <tr>
+                            <td>Jonny Cowlard</td>
+                            <td>Europe 4</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Gough</td>
+                            <td>Europe 4</td>
+                        </tr>
 
-    .box {
-        width: 135.5%;
-    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-    .game-info {
-        font-size: 2rem;
-    }
+    <section id="singles">
+        <h2 onclick="toggleTabContent('single')"><img src="images/trophy.jpeg" alt="Singles"></h2>
+        <div id="singleTab" class="sub-tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Group</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Keith Howes,<br>Steve Collins,<br>Terry Gale,<br>Anthony Buck</td>
+                        <td>Group 1</td>
+                    </tr>
+                    <tr>
+                        <td>Jack Meredith,<br>Michael Williams,<br>Jordan Meredith,<br>Sid Howes</td>
+                        <td>Group 2</td>
+                    </tr>
+                    <tr>
+                        <td>Jake Wilgoss,<br>Jonny Cowlard,<br>Harry Cleanthi,<br>Adam Kheen</td>
+                        <td>Group 3</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Gough,<br>Tom Dunford,<br>Sam Gibson,<br>Jamie Taylor</td>
+                        <td>Group 4</td>
+                    </tr>
 
-    @keyframes overlay-large {
-    from {
-        background-color: rgba(0, 0, 0);
-        font-size: 0;
-    }
-    to {
-        background-color: rgba(0, 0, 0.5);
-        font-size: 3rem;
-    }
-}
-}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle tab content
+        function toggleTabContent(tabId) {
+            const tabContent = document.getElementById(tabId + 'Tab');
+            tabContent.classList.toggle('active');
+        }
+
+        // Function to initialize the countdown timer
+        function initCountdown() {
+            // Target date: 23rd April 2023
+            const targetDate = new Date('2024-04-23T00:00:00').getTime();
+
+            // Update the countdown every second
+            const timerInterval = setInterval(function () {
+                // Current date and time
+                const now = new Date().getTime();
+
+                // Time remaining until target date
+                const timeRemaining = targetDate - now;
+
+                // Calculate days, hours, minutes, and seconds
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                // Display the countdown
+                document.getElementById('countdown').innerHTML = `${days}d:${hours}h:${minutes}m:${seconds}s`;
+
+                // If the countdown is over, clear the interval
+                if (timeRemaining < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('countdown').innerHTML = 'Event started!';
+                }
+            }, 500);
+        }
+
+         // Function to remove overlay
+        function removeOverlay() {
+            // Add fade-out class to trigger opacity transition
+            document.getElementById('start-game').classList.add('fade-out');
+
+            // Remove the visible class after the transition ends
+            setTimeout(function() {
+                document.getElementById('start-game').classList.remove('visible', 'fade-out');
+            }, 5000); // Adjust the timeout to match the duration of your transition
+        }
+
+        // Show the overlay and start the countdown when the page is loaded
+        window.onload = function () {
+            // Show the overlay
+            document.getElementById('start-game').classList.add('visible');
+            
+            // Initialize the countdown
+            initCountdown();
+
+            // Add event listener to the overlay to remove the visible class on click
+            document.getElementById('start-game').addEventListener('click', function() {
+                removeOverlay();
+            });
+        };
+    </script>
+
+</body>
+</html>
